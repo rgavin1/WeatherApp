@@ -1,0 +1,21 @@
+/* Search Component */
+#search-section {
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+}
+
+/* Sarch Filled */
+#search-icon {
+  width: 35px;
+  height: 35px;
+  color: black;
+}
+
+/* Search Box */
+#search-box {
+  width: 223.04px;
+  height: 27.72px;
+  background: rgba(196, 196, 196, 0.19);
+  border-radius: 20px;
+}
