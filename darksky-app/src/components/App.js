@@ -7,9 +7,9 @@ import Weekly from './Weekly';
 
 function App() {
   return (
-      <main>
+      <main className="container pt-5">
         <Search />
-        <Daily />
+        <Daily  />
         <Weekly />
       </main>
   );
