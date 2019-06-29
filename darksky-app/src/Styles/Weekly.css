@@ -1,0 +1,13 @@
+/* Weekly Forecast Group */
+#weekly-forecast-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 25vh;
+  background: rgba(229, 229, 229, 0.3);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
