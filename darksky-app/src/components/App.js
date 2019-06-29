@@ -11,7 +11,10 @@ class App extends Component {
     this.state = {
       city: '',
       current: [],
-      icon: ''
+      icon: '',
+      dailyOne: '',
+      dailyTwo: '',
+      dailyThree: ''
     }
  }
 
@@ -22,11 +25,17 @@ class App extends Component {
    fetch(api).then(response => {
      return response.json();
    }).then(data => {
+
+     console.log(data);
+
      let icon = data.currently.icon.toUpperCase().replace(/-/g, "_");
      this.setState({
        city: data.timezone,
        current: data.currently,
-       icon: icon
+       icon: icon,
+       dailyOne: data.daily.data[0].apparentTemperatureHigh,
+       dailyTwo: data.daily.data[1].apparentTemperatureHigh,
+       dailyThree: data.daily.data[2].apparentTemperatureHigh
      });
    })
  }
@@ -38,7 +47,7 @@ class App extends Component {
           <Search />
           <Daily place={this.state.city} current={this.state.current} icon={this.state.icon}/>
           </div>
-          <Weekly />
+          <Weekly  one={this.state.dailyOne} two={this.state.dailyTwo} three={this.state.dailyThree}/>
         </main>
     );
   }

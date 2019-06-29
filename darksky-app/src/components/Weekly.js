@@ -3,11 +3,16 @@ import '../Styles/Weekly.css';
 
 class Weekly extends Component {
   render(){
+
+    let one = this.props.one;
+    let two = this.props.two;
+    let three = this.props.three;
+    
     return(
       <section id="weekly-forecast-section">
-          <div>Day 1</div>
-          <div>Day 2</div>
-          <div>Day 3</div>
+          <div className="col">{one}</div>
+          <div className="col">{two}</div>
+          <div className="col">{three}</div>
       </section>
     );
   }
