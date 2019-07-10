@@ -19,6 +19,23 @@ class Daily extends Component {
     skycons.set("icon1", Skycons[iconName]);
     skycons.play();
 
+    /* Get the current time and date for the location being request from
+     * Darksky API. ~~~~~~~~~~~~~~
+     */
+    let hours, mins, today, meridiem, time;
+    today = new Date();
+
+    hours = today.getHours();
+    mins = today.getMinutes();
+    today = today.toDateString();
+      if (hours >= 12) {
+        meridiem = 'pm';
+        hours = hours - 12;
+      } else {
+        meridiem = 'am';
+      }
+    time = hours + ':' + mins + ' ' + meridiem;
+
     return (
   <section className="container" id="daily-forecast-section">
     <div className="row" id="location">
@@ -26,9 +43,8 @@ class Daily extends Component {
     <h1 id="timezone">{city}</h1>
     </div>
     <div className="container row" id="time-day-date">
-      <div id="time">5:00pm -</div>
-      <div id="day">Thursday, </div>
-      <div id="date">Date</div>
+      <div id="time">{time} -</div>
+      <div className="ml-2" id="date">{today}</div>
     </div>
     <div className="row container" id="daily-temp-wrapper">
       <div id="temperature">{temperature + '°c'}</div>
