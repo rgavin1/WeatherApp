@@ -7,12 +7,26 @@ class Weekly extends Component {
     let one = this.props.one;
     let two = this.props.two;
     let three = this.props.three;
+
     
+
     return(
       <section id="weekly-forecast-section">
-          <div className="col">{one}</div>
-          <div className="col">{two}</div>
-          <div className="col">{three}</div>
+          <ul className="col">
+            <li>{this.props.input}</li>
+            <li>{one}</li>
+            <li>HI/LO</li>
+          </ul>
+          <ul className="col">
+            <li>Date</li>
+            <li>{two}</li>
+            <li>HI/LO</li>
+          </ul>
+          <ul className="col">
+            <li>Date</li>
+            <li>{three}</li>
+            <li>HI/LO</li>
+          </ul>
       </section>
     );
   }

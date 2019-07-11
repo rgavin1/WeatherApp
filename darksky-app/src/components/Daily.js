@@ -15,7 +15,7 @@ class Daily extends Component {
 
     let iconName = this.props.icon;
 
-    var skycons = new Skycons({"color": "white"});
+    var skycons = new Skycons({"color": "rgba(229, 229, 229, 1)"});
     skycons.set("icon1", Skycons[iconName]);
     skycons.play();
 
@@ -28,7 +28,7 @@ class Daily extends Component {
     hours = today.getHours();
     mins = today.getMinutes();
     today = today.toDateString();
-      if (hours >= 12) {
+      if (hours > 12) {
         meridiem = 'pm';
         hours = hours - 12;
       } else {

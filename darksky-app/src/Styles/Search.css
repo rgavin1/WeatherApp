@@ -4,6 +4,8 @@
   height: 10vh;
   align-items: center;
   padding: 0px;
+  position: absolute;
+  top: 10px;
 }
 
 /* Sarch Filled */
