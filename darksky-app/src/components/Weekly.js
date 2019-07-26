@@ -30,18 +30,18 @@ class Weekly extends Component {
     skycons.play();
 
     return(
-      <section id="weekly-forecast-section">
-          <ul className="col">
+      <section className="d-flex justify-content-around pt-4" id="weekly-forecast-section">
+          <ul>
             <li>{nxtDate(current, 1)}</li>
             <li><canvas id="icon2" width="50" height="50"></canvas></li>
             <li>{one}/{four}</li>
           </ul>
-          <ul className="col">
+          <ul>
             <li>{nxtDate(current, 2)}</li>
             <li><canvas id="icon3" width="50" height="50"></canvas></li>
             <li>{two}/{five}</li>
           </ul>
-          <ul className="col">
+          <ul>
             <li>{nxtDate(current, 3)}</li>
             <li><canvas id="icon4" width="50" height="50"></canvas></li>
             <li>{three}/{six}</li>

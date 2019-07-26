@@ -4,12 +4,10 @@
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
+  width: 100vw;
+  max-height: 30vh;
   min-height: 25vh;
   background: rgba(229, 229, 229, 0.3);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 /* List */
