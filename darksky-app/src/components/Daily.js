@@ -37,12 +37,12 @@ class Daily extends Component {
     time = hours + ':' + mins + ' ' + meridiem;
 
     return (
-  <section className="lg-9 justify-content-center" id="daily-forecast-section">
-    <div className="row" id="location">
-      <FaMapMarkerAlt id="marker-icon" />
+  <section className="justify-content-center" id="daily-forecast-section">
+    <div className="row justify-content-center" id="location">
+      <FaMapMarkerAlt id="marker-icon"/>
     <h1 id="timezone">{city}</h1>
     </div>
-    <div className="container" id="time-day-date">
+    <div className="container justify-content-center" id="time-day-date">
       <div id="time">{time} - {today}</div>
     </div>
     <div className="container" id="daily-temp-wrapper">

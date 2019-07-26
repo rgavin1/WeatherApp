@@ -6,7 +6,7 @@ import 'react-bootstrap';
 class Search extends Component {
   render(){
     return (
-      <section className="container d-flex justify-content-start " id="search-section">
+      <section className="container d-flex justify-content-center " id="search-section">
           <FaSearch id="search-icon" />
         <input className="ml-1" id="search-box"></input>
       </section>
